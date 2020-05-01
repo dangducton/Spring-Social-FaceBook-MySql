@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1"/>
+<title>Profile</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+    	<h2 th:text="${user.firstName+' '+user.lastName}"></h2>
+    	<img th:src="${user.imageUrl}"/>
+    <a th:href="@{'/logout'}"> Logout</a>
+    </div>
+</div>
+</body>
+</html>
